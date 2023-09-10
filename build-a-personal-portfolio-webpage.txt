@@ -1,0 +1,43 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <a href="#">Home
+    </nav>
+    <section id="welcome-section">
+      <h1>Hi</h1>
+      </section>
+    <section id="projects">
+      <p class="project-tile"></p?
+      </section>
+      <section id="profile">
+        <a id="profile-link" href="https://github.com/CODEatlasind" target="_blank">Github
+        </section>
+</body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+#navbar{
+  position:fixed;
+  top :0;
+}
+#welcome-section{
+  height:100vh;
+}
+@media(min-width:1000px){
+  
+}
+
+** end of undefined **
+

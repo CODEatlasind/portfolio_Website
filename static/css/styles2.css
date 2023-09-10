@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Condensed:wght@300&display=swap');
+
+
+/* Main html */
+html{
+    font-size: 62.5%;
+  }
+  *{
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+    
+  }
+  body{
+  background-color: rgb(57, 57, 57);
+  margin-top:5rem;
+  /* font-family: 'Roboto Condensed', sans-serif; */
+}
+/* movetotop */
+.moveToTop{
+  position:fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  
+}
+/* navbar */
+
+/* Profile */
+section{
+  padding: 4vh;
+  height: 96vh;
+  margin: 0 5rem;
+  min-height: fit-content;
+}
+.container{
+  width: 100%;
+}
+.intro-container{
+  padding: 12.5rem 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center
+  /* position: absolute;
+  top:50%; */
+}
+#profile-pic-container{
+  height: fit-content;
+  max-width:30rem;
+  text-align: center;
+}
+#profile-img{
+  width: 100%;
+  height: auto;
+  padding: 0 auto 0 auto;
+
+}
+#name{
+  font-size: xx-large;
+  font-family: 'Poppins', sans-serif;
+}
+.btn{
+    margin: 1rem 0.5rem 1rem 0.5rem;
+}
+.desc{
+  padding: 0rem;
+  margin: 0;
+  text-align:start;
+  font-size: large;
+}
+/* .social-container{
+  margin-left: 1rem;
+}
+.socials{
+  padding: 1rem 0.5rem;
+  
+} */
+
+/* Project */
+.project-tile{
+  margin-top: 5vh;
+  /* height: 100%; */
+  /* padding-bottom: 5vh; */
+}
+.project-tile{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 40%;
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+}
+.project-tile{
+  overflow:auto;
+  
+}
+.card{
+  display: grid;
+  gap: 1rem;
+
+}
+.card-img-top{
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.project-tile::-webkit-scrollbar {
+  display: none;
+}
+
+/* Contacts */
+.socials-container>button{
+  padding: auto auto;
+}
+.social-container{
+  /* margin: auto auto; */
+  display: flex;
+  
+}
+
+
+
+
+
+
+
+

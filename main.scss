@@ -1,0 +1,17 @@
+$primary : #fdd7c1; 
+$danger : #ff6702; 
+$body-bg : hsl(0, 0%, 19%);
+$body-color: #ffffff;
+$navbar-light-color : $body-color;
+$font-family-base : $body-color;
+
+$navbar-light-hover-color:$danger;
+$navbar-light-active-color:$primary;
+$btn-link-hover-color: $danger;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@500;700&family=Roboto+Condensed:wght@300&display=swap');
+$font-family-base : 'Inter', sans-serif;
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+// node-sass ./main.scss -wo ./static/css/
