@@ -9,5 +9,10 @@ const projects: Project[] = [
   },
 ];
 export const getProjects = async (): Promise<Project[]> => {
-  return projects;
+  const projects = await ProjectModel.find().lean();
+
+  return projects.map((project) => ({
+    ...project,
+    id: String(project._id),
+  }));
 };

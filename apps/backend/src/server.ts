@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import projectsRouter from "./modules/projects/projects.routes.js";
 import { errorMiddleware } from "./middleware/error.middleware.js";
+import { connectDatabase } from "./config/database.js";
 dotenv.config();
 const app = express();
 
@@ -27,6 +28,15 @@ app.use("/api/projects", projectsRouter);
 
 app.use(errorMiddleware);
 
-app.listen(port, () => {
+const startServer = async (): Promise<void> => {
+  await connectDatabase();
+
+  app.listen(port, () => {
     console.log(`Backend running on http://localhost:${port}`);
+  });
+};
+
+startServer().catch((error: unknown) => {
+  console.error("Error starting the server:", error);
+  // process.exit(1); // Exit the process with a failure code
 });
