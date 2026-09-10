@@ -18,3 +18,17 @@ export const createProject = async (project: Project): Promise<Project> => {
     id: String(newProject._id),
   };
 };
+
+export const getProjectById = async (id: string): Promise<Project> => {
+  if (!id) {
+    throw new Error("Project ID is required");
+  }
+  const project = await ProjectModel.findById(id).lean();
+  if (!project) {
+    throw new Error(`Project with ID ${id} not found`);
+  }
+  return {
+    ...project,
+    id: String(project._id),
+  };
+};

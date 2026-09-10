@@ -1,5 +1,9 @@
 import { type Request, type Response, type NextFunction, json } from "express";
-import { getProjects, createProject } from "./projects.service.js";
+import {
+  getProjects,
+  createProject,
+  getProjectById,
+} from "./projects.service.js";
 
 export const getProjectsController = async (
   _req: Request,
@@ -28,6 +32,26 @@ export const createProjectController = async (
     res.status(201).json({
       message: "Project created successfully",
       project: createdProject,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getProjectByIdController = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): Promise<void> => {
+  try {
+    const { id } = req.params;
+    if (typeof id !== "string") {
+      throw new Error("Project ID must be a string");
+    }
+    const fetchedProject = await getProjectById(id);
+    res.status(200).json({
+      message: "Project fetched successfully",
+      project: fetchedProject,
     });
   } catch (error) {
     next(error);
