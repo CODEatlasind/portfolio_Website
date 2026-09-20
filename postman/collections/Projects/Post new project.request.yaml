@@ -1,0 +1,29 @@
+$kind: http-request
+url: localhost:5000/api/projects
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"title\": \"AI Job Hunter\",\r
+
+    \  \"description\": \"An AI-powered job discovery and tracking platform\",\r
+
+    \  \"technologies\": [\r
+
+    \    \"React\",\r
+
+    \    \"Node.js\",\r
+
+    \    \"Express\",\r
+
+    \    \"MongoDB\",\r
+
+    \    \"TypeScript\"\r
+
+    \  ],\r
+
+    \  \"featured\": true\r
+
+    }"
+order: 3266161885060352

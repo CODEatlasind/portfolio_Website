@@ -1,0 +1,4 @@
+$kind: http-request
+url: localhost:5000/api/projects/6aa316d8eaee4d1320fbc709
+method: GET
+order: 1009178152809433
