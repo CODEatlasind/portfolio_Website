@@ -1,5 +1,7 @@
 import { type Project } from "./projects.types.js";
 import { ProjectModel } from "./projects.model.js";
+import { NotFoundError } from "../../middleware/error.middleware.js";
+import { toProjectResponse } from "./projects.mapper.js";
 
 export const getProjects = async (): Promise<Project[]> => {
   const projects = await ProjectModel.find().lean();
@@ -25,10 +27,7 @@ export const getProjectById = async (id: string): Promise<Project> => {
   }
   const project = await ProjectModel.findById(id).lean();
   if (!project) {
-    throw new Error(`Project with ID ${id} not found`);
+    throw new NotFoundError(`Project with ID ${id} not found`);
   }
-  return {
-    ...project,
-    id: String(project._id),
-  };
+  return toProjectResponse(project);
 };

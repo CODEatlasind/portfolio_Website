@@ -1,6 +1,7 @@
 import mongoose, { Schema } from "mongoose";
+import type { ProjectDocument } from "./projects.types.js";
 
-const projectSchema = new Schema(
+const projectSchema = new Schema<ProjectDocument>(
   {
     title: {
       type: String,
@@ -26,4 +27,7 @@ const projectSchema = new Schema(
   },
 );
 
-export const ProjectModel = mongoose.model("Project", projectSchema);
+export const ProjectModel = mongoose.model<ProjectDocument>(
+  "Project",
+  projectSchema,
+);
